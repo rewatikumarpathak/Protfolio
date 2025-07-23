@@ -26,7 +26,7 @@ const servicedata: data[] = [
     photoUrl: "./services/webdevelopment.webp",
     Alt: "Web Development",
     heading:
-      "I build responsive and user-friendly websites using WordPress and its powerful plugins.I deliver clean, functional, and easy-to-manage websites tailored to your needs.",
+      "I build responsive and user-friendly websites using WordPress and its powerful plugins. I deliver clean, functional, and easy-to-manage websites tailored to your needs.",
   },
 ];
 
