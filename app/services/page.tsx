@@ -37,7 +37,7 @@ export default function Services() {
         <h1 className="font-bold text-[2.4rem] pt-5 text-center">My Service</h1>
         <div className=" animate__animated animate__zoomIn flex flex-wrap gap-12 justify-center">
           {servicedata.map((data, index) => (
-            <div className="bg-white shadow-2xl mt-5 px-12 py-7 w-[18rem] h-[28rem] rounded-2xl flex flex-col gap-2 justify-center items-center text-center">
+            <div key={index} className="bg-white shadow-2xl mt-5 px-12 py-7 w-[18rem] h-[28rem] rounded-2xl flex flex-col gap-2 justify-center items-center text-center">
               <img
                 className="w-38  text-center"
                 src={data.photoUrl}

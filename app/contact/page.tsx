@@ -20,13 +20,14 @@ const Contact = (): JSX.Element => {
     e.preventDefault();
     console.log(data);
     try {
-      let response = await axios.post("api/contact/", data, {
+      const response = await axios.post("api/contact/", data, {
         headers: {
           "Content-Type": "application/json",
         },
       });
-    } catch (err: any) {
-      alert("Got an error while posting:" + err);
+    } catch (e) {
+      const result = (e as Error).message;
+      alert("submit error:" + result)
     }
   };
 

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
-
       <head>
         <link
           rel="stylesheet"
@@ -36,10 +36,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
       >
+        <Script
+          src="https://third-party-script.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+          strategy="afterInteractive"
+        />
         <Navbar />
         {children}
-        <Footer/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <Footer />
       </body>
     </html>
   );
