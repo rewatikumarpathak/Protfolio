@@ -16,6 +16,7 @@ const roboto = Roboto({
 });
 
 export default function Home() {
+  //it is used for smooth scroll.
   // useEffect(() => {
   //   let scrollInstance: any;
   //   import("locomotive-scroll").then((LocomotiveScroll) => {
