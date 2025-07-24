@@ -13,13 +13,14 @@ export async function POST(request: Request) {
     });
 
     const info = await transporter.sendMail({
-    from: `"yubaraj" <ramkrishna@gmail.com>`,
-    to: "yubarajpathak009@gmail.com",
-    subject: "Some Message",
-    text: data.message,
-    html:"<b>hello</b>"
-  });
+      from: `"yubaraj" <ramkrishna@gmail.com>`,
+      to: "yubarajpathak009@gmail.com",
+      subject: "Some Message",
+      text: data.message,
+      html: "<b>hello</b>",
+    });
 
+    console.log(info);
 
     return new Response(
       JSON.stringify({ message: "Email sent successfully!" }),

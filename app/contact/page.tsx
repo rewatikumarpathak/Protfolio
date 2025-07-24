@@ -25,6 +25,9 @@ const Contact = (): JSX.Element => {
           "Content-Type": "application/json",
         },
       });
+      if (response){
+        console.log("success sending data")
+      }
     } catch (e) {
       const result = (e as Error).message;
       alert("submit error:" + result)
