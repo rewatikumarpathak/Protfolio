@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="lg:flex h-[100vh] grid justify-center items-center md:gap-10 z-0 ">
+      <section className="lg:flex h-[100vh] md:mb-0 mb-16 grid justify-center items-center md:gap-10 z-0 ">
         <div
           className={`${poppins.className} flex lg:absolute justify-center gap-2 lg:top-80 lg:left-[-8rem] mt-6 items-center lg:rotate-[-90deg] order-last lg:order-1`}
         >
@@ -65,7 +65,7 @@ export default function Home() {
               I am Rewati Kumar Pathak
             </p>
             <p
-              className={`w-[24rem] mt-4 lg:ml-2 font-bold ${poppins.className} text-[#535353]`}
+              className={`md:w-[24rem] w-[18rem] mt-4 lg:ml-2 font-bold ${poppins.className} text-[#535353]`}
             >
               I worked in different field with the different
               responsibilities. Recently,I am also working as a freelancer. Please
