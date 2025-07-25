@@ -26,11 +26,19 @@ const Contact = (): JSX.Element => {
         },
       });
       if (response){
-        console.log("success sending data")
+        console.log("success sending data");
+        alert("message send success!");
       }
     } catch (e) {
       const result = (e as Error).message;
       alert("submit error:" + result)
+    }
+    finally{
+       setdata({
+        name:"",
+        email:"",
+        message:"",
+       })
     }
   };
 
