@@ -25,20 +25,19 @@ const Contact = (): JSX.Element => {
           "Content-Type": "application/json",
         },
       });
-      if (response){
+      if (response) {
         console.log("success sending data");
         alert("message send success!");
       }
     } catch (e) {
       const result = (e as Error).message;
-      alert("submit error:" + result)
-    }
-    finally{
-       setdata({
-        name:"",
-        email:"",
-        message:"",
-       })
+      alert("submit error:" + result);
+    } finally {
+      setdata({
+        name: "",
+        email: "",
+        message: "",
+      });
     }
   };
 
@@ -71,6 +70,7 @@ const Contact = (): JSX.Element => {
               Name
             </label>
             <input
+              required
               onChange={(e) => {
                 setdata((prev: form) => ({ ...prev, name: e.target.value }));
               }}
@@ -85,6 +85,7 @@ const Contact = (): JSX.Element => {
               Email
             </label>
             <input
+              required
               onChange={(e) => {
                 setdata((prev: form) => ({ ...prev, email: e.target.value }));
               }}
@@ -99,6 +100,7 @@ const Contact = (): JSX.Element => {
               Message
             </label>
             <textarea
+              required
               onChange={(e) => {
                 setdata((prev: form) => ({ ...prev, message: e.target.value }));
               }}
